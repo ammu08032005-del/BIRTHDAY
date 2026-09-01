@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>For Dariuz ♡</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/password.css">
+</head>
+
+<body>
+
+  <!-- Cute floating background -->
+  <div id="particles"></div>
+
+  <main class="stage">
+
+    <!-- Small opening text -->
+    <p class="eyebrow fade-el is-visible" id="preline">
+      hii Dariuz ♡
+    </p>
+
+    <!-- Birthday -->
+    <p class="date-stamp fade-el" id="datestamp">
+      Hint: A special date
+    </p>
+
+    <!-- Password area -->
+    <div class="lock-block fade-el" id="lockblock">
+
+      <p class="body-text">
+        I made a little something for you...
+      </p>
+
+      <p class="small-text">
+        but first, you need to get past this 👀
+      </p>
+
+      <form id="passForm" autocomplete="off">
+
+        <div class="password-wrapper">
+
+          <input
+            <input
+
+  id="passInput"
+  type="text"
+  inputmode="numeric"
+  maxlength="8"
+  aria-label="Enter birthday code"
+  placeholder="• • • • • • • •"
+  autocomplete="off"
+  autocorrect="off"
+  autocapitalize="off"
+  spellcheck="false"
+
+          >
+
+        </div>
+
+        <button
+          type="submit"
+          class="link-forward"
+          id="enterButton">
+          let me in ♡
+        </button>
+
+      </form>
+
+      <!-- Wrong password message -->
+      <p
+        id="errorMsg"
+        class="error-msg"
+        aria-live="polite">
+      </p>
+
+    </div>
+
+  </main>
+
+  <!-- Little signature -->
+  <p class="page-mark">
+    made by Parvathy ♡
+  </p>
+
+  <script src="js/effects.js"></script>
+  <script src="js/password.js"></script>
+
+</body>
+</html>

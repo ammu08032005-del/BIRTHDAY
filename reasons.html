@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Few Things — For Dariuz</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/reasons.css">
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<a href="memories.html" class="nav-back">← back</a>
+
+<main class="stage">
+
+  <p class="eyebrow fade-el">
+    a few things I like about you
+  </p>
+
+  <div class="card-wrap">
+
+    <button
+      class="reason-card"
+      id="reasonCard"
+      aria-live="polite"
+      aria-label="Tap to reveal">
+
+      <!-- FRONT OF CARD -->
+      <span class="card-face card-front">
+
+        <span class="card-index" id="cardIndex">
+          01
+        </span>
+
+        <img
+          id="cardImage"
+          class="reason-image"
+          src="assets/images/01.jpeg"
+          alt="A memory of Dariuz"
+        >
+
+      </span>
+
+
+      <!-- BACK OF CARD -->
+      <span class="card-face card-back">
+
+        <img
+          id="cardBackImage"
+          class="reason-image"
+          src="assets/images/01.jpeg"
+          alt="A memory of Dariuz"
+        >
+
+        <span
+          class="card-text"
+          id="cardText">
+          Having fun with you. 🤍
+        </span>
+
+      </span>
+
+    </button>
+
+  </div>
+
+
+  <p class="tap-hint" id="tapHint">
+    tap the card
+  </p>
+
+
+  <div class="reason-nav">
+
+    <button
+      class="link-forward"
+      id="nextBtn">
+      Next →
+    </button>
+
+  </div>
+
+
+  <a
+    href="letter.html"
+    class="link-forward"
+    id="continueLink"
+    style="opacity: 0;">
+
+    Continue
+
+  </a>
+
+</main>
+
+
+<script src="js/effects.js"></script>
+<script src="js/reasons.js"></script>
+
+</body>
+</html>

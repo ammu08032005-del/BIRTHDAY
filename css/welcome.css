@@ -1,0 +1,212 @@
+
+/* =========================================================
+   Welcome Page
+   Cute + Soft + Playful
+   ========================================================= */
+
+
+/* -----------------------------------------
+   Welcome text
+   ----------------------------------------- */
+
+.welcome-line {
+
+  position: absolute;
+
+  font-family: var(--serif);
+
+  font-weight: 500;
+
+  font-size: clamp(1.7rem, 6vw, 2.5rem);
+
+  line-height: 1.35;
+
+  color: var(--text-main);
+
+  opacity: 0;
+
+  max-width: 22ch;
+
+  padding: 0 1rem;
+
+  text-align: center;
+
+  pointer-events: none;
+
+  transform: translateY(6px) scale(0.98);
+
+}
+
+
+/* -----------------------------------------
+   Blinking entrance
+   ----------------------------------------- */
+
+.welcome-line.blink-in {
+
+  animation: cuteBlink 2.8s ease forwards;
+
+}
+
+
+@keyframes cuteBlink {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateY(8px)
+      scale(0.97);
+  }
+
+
+  15% {
+
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+
+  30% {
+
+    opacity: 0.55;
+  }
+
+
+  40% {
+
+    opacity: 1;
+  }
+
+
+  72% {
+
+    opacity: 1;
+  }
+
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translateY(-5px)
+      scale(1.01);
+  }
+
+}
+
+
+/* -----------------------------------------
+   Special styling for the first line
+   ----------------------------------------- */
+
+#line1 {
+
+  font-family: var(--cute);
+
+  font-size: clamp(1.8rem, 7vw, 2.7rem);
+
+  color: var(--rose);
+
+}
+
+
+/* -----------------------------------------
+   Continue button
+   ----------------------------------------- */
+
+#beginLink {
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  margin-top: var(--space-2);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.3s ease;
+}
+
+
+#beginLink.show {
+
+  opacity: 1;
+
+  pointer-events: auto;
+
+  animation:
+    buttonAppear 0.8s ease forwards;
+}
+
+
+@keyframes buttonAppear {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateY(8px);
+  }
+
+
+  100% {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* -----------------------------------------
+   Button hover
+   ----------------------------------------- */
+
+#beginLink:hover {
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* -----------------------------------------
+   Welcome page layout
+   ----------------------------------------- */
+
+.welcome-stage {
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* -----------------------------------------
+   Mobile
+   ----------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .welcome-line {
+
+    font-size: 1.65rem;
+
+    max-width: 19ch;
+  }
+
+
+  #line1 {
+
+    font-size: 2rem;
+  }
+
+}

@@ -1,0 +1,628 @@
+
+/* =========================================================
+   Dariuz's Birthday — Cute & Personal Design System
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Pacifico&display=swap');
+
+
+/* =========================================================
+   ROOT
+   ========================================================= */
+
+:root {
+
+  /* Soft cute color palette */
+
+  --bg-main:       #fff7f8;
+  --bg-soft:       #fff0f3;
+  --bg-card:       #ffffff;
+
+  --pink:          #e78fa8;
+  --pink-light:    #f6c5d2;
+  --pink-soft:     #fde3e9;
+
+  --rose:          #c96883;
+  --rose-dark:     #a94f69;
+
+  --text-main:     #503b42;
+  --text-soft:     #806c73;
+  --text-light:    #aa969d;
+
+  --white:         #ffffff;
+
+  /* Type */
+
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --cute: 'Pacifico', cursive;
+
+  /* Rhythm */
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.75rem;
+  --space-4: 3rem;
+  --space-5: 5rem;
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   BODY
+   ========================================================= */
+
+body {
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(246, 197, 210, 0.35),
+      transparent 28%
+    ),
+
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(253, 227, 233, 0.55),
+      transparent 30%
+    ),
+
+    var(--bg-main);
+
+  color: var(--text-main);
+
+  font-family: var(--sans);
+
+  font-weight: 400;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: var(--pink-light);
+  color: var(--text-main);
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+
+  outline: 2px solid var(--pink);
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* =========================================================
+   MAIN PAGE SHELL
+   ========================================================= */
+
+.stage {
+
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: var(--space-4) var(--space-3);
+
+  text-align: center;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   BACKGROUND PARTICLES
+   ========================================================= */
+
+#particles {
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  overflow: hidden;
+}
+
+
+.particle {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: var(--pink);
+
+  opacity: 0;
+
+  animation: floatParticle 12s ease-in-out infinite;
+}
+
+
+@keyframes floatParticle {
+
+  0% {
+
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.8);
+  }
+
+  15% {
+
+    opacity: 0.45;
+  }
+
+  70% {
+
+    opacity: 0.25;
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform:
+      translateY(-100px)
+      scale(1.1);
+  }
+}
+
+
+/* =========================================================
+   SMALL OPENING TEXT
+   ========================================================= */
+
+.eyebrow {
+
+  font-family: var(--sans);
+
+  font-size: 0.78rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+
+  color: var(--rose);
+
+  margin: 0 0 var(--space-2);
+}
+
+
+/* =========================================================
+   MAIN HEADINGS
+   ========================================================= */
+
+.headline {
+
+  font-family: var(--serif);
+
+  font-weight: 500;
+
+  font-size: clamp(1.8rem, 6vw, 3rem);
+
+  line-height: 1.25;
+
+  margin: 0;
+
+  max-width: 20ch;
+
+  color: var(--text-main);
+}
+
+
+/* Cute handwritten heading */
+
+.cute-title {
+
+  font-family: var(--cute);
+
+  font-weight: 400;
+
+  color: var(--rose);
+
+}
+
+
+/* =========================================================
+   BODY TEXT
+   ========================================================= */
+
+.body-text {
+
+  font-family: var(--sans);
+
+  font-weight: 400;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  color: var(--text-soft);
+
+  max-width: 42ch;
+}
+
+
+.small-text {
+
+  font-family: var(--sans);
+
+  font-size: 0.82rem;
+
+  color: var(--text-light);
+
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.link-forward {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 0.4rem;
+
+  font-family: var(--sans);
+
+  font-size: 0.9rem;
+
+  font-weight: 500;
+
+  color: var(--white);
+
+  background: var(--pink);
+
+  padding: 0.7rem 1.25rem;
+
+  border: none;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 16px rgba(201, 104, 131, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.link-forward:hover {
+
+  background: var(--rose);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 9px 22px rgba(201, 104, 131, 0.24);
+}
+
+
+.link-forward:active {
+
+  transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.hair-rule {
+
+  width: 55px;
+
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: var(--pink-light);
+
+  margin: var(--space-3) 0;
+}
+
+
+/* =========================================================
+   LITTLE HEART
+   ========================================================= */
+
+.heart-mark {
+
+  width: 16px;
+
+  height: 16px;
+
+  position: relative;
+
+  display: inline-block;
+
+  transform: rotate(-45deg);
+
+  margin: 5px;
+
+}
+
+
+.heart-mark::before {
+
+  content: '';
+
+  position: absolute;
+
+  width: 16px;
+
+  height: 16px;
+
+  background: var(--pink);
+
+  border-radius: 50%;
+
+  top: -8px;
+
+  left: 0;
+}
+
+
+.heart-mark::after {
+
+  content: '';
+
+  position: absolute;
+
+  width: 16px;
+
+  height: 16px;
+
+  background: var(--pink);
+
+  border-radius: 50%;
+
+  top: 0;
+
+  left: 8px;
+}
+
+
+.heart-mark {
+
+  background: var(--pink);
+
+  width: 16px;
+
+  height: 16px;
+
+}
+
+
+/* =========================================================
+   FADE ANIMATION
+   ========================================================= */
+
+.fade-el {
+
+  opacity: 0;
+
+  transition:
+    opacity 0.9s ease;
+}
+
+
+.fade-el.is-visible {
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   FADE UP
+   ========================================================= */
+
+.fade-up {
+
+  opacity: 0;
+
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+
+.fade-up.is-visible {
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   PAGE SIGNATURE
+   ========================================================= */
+
+.page-mark {
+
+  position: fixed;
+
+  bottom: 1rem;
+
+  right: 1rem;
+
+  font-family: var(--cute);
+
+  font-size: 0.65rem;
+
+  color: var(--text-light);
+
+  z-index: 2;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.nav-back {
+
+  position: fixed;
+
+  top: 1rem;
+
+  left: 1rem;
+
+  font-family: var(--sans);
+
+  font-size: 0.78rem;
+
+  font-weight: 500;
+
+  color: var(--text-light);
+
+  background: rgba(255, 255, 255, 0.7);
+
+  padding: 0.45rem 0.75rem;
+
+  border-radius: 999px;
+
+  z-index: 5;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.nav-back:hover {
+
+  color: var(--rose);
+
+  background: var(--white);
+
+  transform: translateX(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .stage {
+
+    padding:
+      2.5rem
+      1.25rem;
+  }
+
+  .headline {
+
+    font-size: 1.9rem;
+  }
+
+  .body-text {
+
+    font-size: 0.95rem;
+  }
+
+  .page-mark {
+
+    bottom: 0.75rem;
+
+    right: 0.75rem;
+  }
+
+}
+

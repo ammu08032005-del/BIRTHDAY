@@ -1,0 +1,85 @@
+.letter-page {
+  width: 100%;
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  padding: 5rem 1.4rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+.letter-heading {
+  font-family: var(--serif);
+  font-style: italic;
+
+  font-size: 1.4rem;
+
+  color: var(--off-white);
+
+  text-align: center;
+
+  margin: 0;
+}
+
+.letter-body {
+  width: 100%;
+  max-width: 560px;
+
+  margin: 0 auto;
+
+  text-align: left;
+
+  font-family: var(--serif);
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  color: var(--off-white-60);
+}
+
+.letter-body p {
+  margin: 0 0 1.7rem;
+}
+
+.letter-body p:first-child {
+  color: var(--off-white);
+
+  font-size: 1.15rem;
+
+  font-style: italic;
+
+  margin-bottom: 2.5rem;
+}
+
+.letter-sign {
+  text-align: right;
+
+  color: var(--off-white);
+
+  font-style: italic;
+
+  font-size: 1.15rem;
+
+  margin-top: 3rem !important;
+}
+
+.letter-page .heart-mark {
+  display: block;
+
+  margin: 1rem auto 0;
+}
+
+@media (max-width: 480px) {
+
+  .letter-page {
+    padding: 4rem 1.25rem;
+  }
+
+  .letter-body {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+}
